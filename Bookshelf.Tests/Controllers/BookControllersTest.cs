@@ -1,9 +1,7 @@
 
 using Moq;
 using Xunit;
-using System.Threading.Tasks;
 using System.Collections.Generic;
-using System.Collections;
 using Bookshelf.Services.Abstractions;
 using Bookshelf.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -11,7 +9,7 @@ using Bookshelf.ViewModels;
 
 namespace Bookshelf.Controllers.Tests.UnitTests
 {
-    public class BookServicesTest
+    public class BookControllersTest
     {
         [Fact]
         public void Get_ReturnsOkObjectResult_WithABook()
@@ -57,7 +55,7 @@ namespace Bookshelf.Controllers.Tests.UnitTests
             Assert.Equal(createBook.Title, returnBook.Title);
         }
 
-         [Fact]
+        [Fact]
         public void Upate_ReturnsOkObjectResult_WithABook() 
         {
             int bookId = 1;
